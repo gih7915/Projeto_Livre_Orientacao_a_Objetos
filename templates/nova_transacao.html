@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Transação</title>
+</head>
+<body>
+    <h1>Nova Transação</h1>
+    <form method="POST">
+        <label>Tipo:</label>
+        <select name="tipo">
+            <option value="receita">Receita</option>
+            <option value="despesa">Despesa</option>
+        </select><br>
+        <label>Valor:</label>
+        <input type="number" name="valor" step="0.01" required><br>
+        <label>Data:</label>
+        <input type="date" name="data" required><br>
+        <label>Descrição:</label>
+        <input type="text" name="descricao" required><br>
+        <label>Categoria:</label>
+        <input type="text" name="categoria" required><br>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
