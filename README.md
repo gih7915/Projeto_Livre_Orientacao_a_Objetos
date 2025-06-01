@@ -57,6 +57,79 @@ Este projeto tem como objetivo criar um sistema para controle financeiro pessoal
 
 ---
 
+## 📋Diagrama de Classes
+
+## 📘 Diagrama de Classes
+
+Diagrama de classes representando a modelagem do sistema de controle financeiro:
+
+```text
++---------------------+
+|     Categoria       |
++---------------------+
+| - nome: str         |
++---------------------+
+| +__init__()         |
+| +get_nome()         |
+```
+
+```text
++---------------------+
+|      Receita        |
++---------------------+
+| - valor: float      |
+| - data: date        |
+| - categoria: str    |
++---------------------+
+| +__init__()         |
+| +get_valor()        |
+| +get_data()         |
+| +get_categoria()    |
+```
+
+```text
++---------------------+
+|      Despesa        |
++---------------------+
+| - valor: float      |
+| - data: date        |
+| - categoria: str    |
++---------------------+
+| +__init__()         |
+| +get_valor()        |
+| +get_data()         |
+| +get_categoria()    |
+```
+
+```text
++---------------------+
+|      Carteira       |
++---------------------+
+| - receitas: list    |
+| - despesas: list    |
++---------------------+
+| +__init__()         |
+| +adicionar_receita()|
+| +adicionar_despesa()|
+| +saldo_total()      |
+```
+
+```text
++---------------------+
+|     main.py         |
++---------------------+
+| (Controlador Flask) |
++---------------------+
+| +rotas de interface |
+```
+
+### Relações:
+- `Carteira` possui `Receita` e `Despesa`
+- `Receita` e `Despesa` têm uma `Categoria`
+
+
+---
+
 ## 🗂 Estrutura do Projeto
 
 ```text
