@@ -1,59 +1,93 @@
-# Projeto_Livre_Orientacao_a_Objetos
 # 💰 Controle Financeiro da Gih
 
-Este projeto é um sistema de controle financeiro pessoal, desenvolvido para a disciplina de **Orientação a Objetos (01/2025)** na **Faculdade UnB Gama**. Ele permite gerenciar receitas e despesas com base em categorias, datas e descrições, exibindo o saldo total atualizado.
-
-## 🚀 Funcionalidades
-
-- ✅ Cadastro de receitas e despesas
-- ✅ Classificação por categoria e data
-- ✅ Visualização das transações organizadas por mês
-- ✅ Exclusão de transações
-- ✅ Cálculo automático do saldo final
-- ✅ Persistência de dados (serialização com `pickle`)
-- ✅ Interface web com Flask
+Projeto desenvolvido para a disciplina **Orientação a Objetos** (01/2025)  
+Faculdade UnB Gama — Prof. Henrique Moura
 
 ---
 
-## 🧠 Casos de Uso
+## 📋 Definição do Problema
 
-### 📌 Caso 1: Adicionar Receita ou Despesa
-- **Ator**: Usuário
-- **Descrição**: O usuário insere uma nova transação (receita ou despesa) com valor, data, categoria e descrição.
-
-### 📌 Caso 2: Visualizar Transações
-- **Ator**: Usuário
-- **Descrição**: O sistema exibe as transações agrupadas por mês, com tipo, valor e categoria.
-
-### 📌 Caso 3: Excluir Transação
-- **Ator**: Usuário
-- **Descrição**: O usuário pode excluir uma transação específica clicando em “Excluir”.
+Este projeto tem como objetivo criar um sistema para controle financeiro pessoal, que permita ao usuário cadastrar receitas e despesas, visualizar o saldo atual e organizar as transações por mês e categoria.
 
 ---
 
-## 🧱 Estrutura de Classes
+## ✅ Casos de Uso
 
-package/
-│
-├── carteira.py      # Classe controladora principal (Carteira)
-├── categoria.py     # Classe para lidar com categorias
-├── receita.py       # Subclasse de Transação para receitas
-├── despesa.py       # Subclasse de Transação para despesas
-├── mixin.py         # Classe mixin (ex: salvar em arquivo ou exibir dados)
+### 1. Adicionar Transação
+- **Ator:** Usuário
+- **Descrição:** O usuário cadastra uma nova transação (receita ou despesa), informando valor, data, categoria e descrição.
+- **Fluxo:**
+  1. O usuário abre o formulário de nova transação.
+  2. Preenche os dados solicitados.
+  3. Envia o formulário.
+  4. O sistema salva a transação e atualiza o saldo.
 
-## 🔄 Paradigmas e Padrões Usados
--✅ Herança: Receita e Despesa herdam de uma classe base Transacao
+### 2. Excluir Transação
+- **Ator:** Usuário
+- **Descrição:** O usuário pode excluir uma transação previamente cadastrada.
+- **Fluxo:**
+  1. O usuário localiza a transação na lista.
+  2. Clica no botão “Excluir”.
+  3. O sistema remove a transação e atualiza o saldo.
 
--✅ Polimorfismo: Métodos como get_valor() são sobrescritos ou usados de forma uniforme
+### 3. Visualizar Transações
+- **Ator:** Usuário
+- **Descrição:** O sistema apresenta as transações agrupadas por mês, exibindo saldo e categorias.
 
--✅ Composição forte: Carteira contém várias Transacao
+---
 
--✅ Associação fraca: Transacao utiliza uma instância de Categoria
+## 🧠 Modelagem Orientada a Objetos
 
--✅ Mixin: Classe auxiliar para salvar ou exportar dados
+- **Herança:**  
+  `Receita` e `Despesa` herdam da classe base `Transacao`.
+  
+- **Polimorfismo:**  
+  Métodos como `get_valor()` e `get_info()` têm implementações específicas em `Receita` e `Despesa`.
+  
+- **Composição forte:**  
+  A classe `Carteira` contém a lista de transações, que não existem fora dela.
+  
+- **Associação fraca:**  
+  Cada `Transacao` está associada a uma `Categoria`, que pode ser compartilhada entre transações.
+
+---
+
+## 🗂 Estrutura do Projeto
+
+controle-financeiro/
+├── main.py # Aplicação Flask principal
+├── README.md # Documentação do projeto
+├── data/
+│ └── dados.pkl # Arquivo de dados serializados
+├── static/
+│ └── styles.css # Arquivo de estilos CSS
+├── templates/
+│ └── index.html # Template HTML principal
+└── package/
+├── carteira.py # Classe Carteira
+├── categoria.py # Classe Categoria
+├── receita.py # Classe Receita
+└── despesa.py # Classe Despesa
+
+---
 
 ## 💾 Serialização
-Os dados das transações são salvos e carregados automaticamente no arquivo data/dados.pkl utilizando o módulo pickle, garantindo que o histórico do usuário seja preservado.
 
-## 🖥️ Interface
-Esta versão utiliza o Flask para criar uma interface web simples e responsiva, que pode ser adaptada para desktop futuramente com PyQt5 ou Tkinter.
+O sistema utiliza o módulo `pickle` para serializar e desserializar os objetos da carteira, garantindo persistência dos dados entre execuções.
+
+---
+
+## 🖥 Interface Gráfica
+
+Desenvolvida com Flask, a interface é simples e intuitiva, apresentando as transações agrupadas por mês e categoria, com formulários para inclusão e exclusão de transações.
+
+---
+
+## 📬 Contato
+
+- Email: giovana79155@gmail.com  
+- Telefone: (61) 9 9243-2061
+
+---
+
+**Projeto desenvolvido por Giovana — 2024**
