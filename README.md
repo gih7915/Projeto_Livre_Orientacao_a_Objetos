@@ -63,65 +63,8 @@ Este projeto tem como objetivo criar um sistema para controle financeiro pessoal
 
 Diagrama de classes representando a modelagem do sistema de controle financeiro:
 
-```text
-+---------------------+
-|     Categoria       |
-+---------------------+
-| - nome: str         |
-+---------------------+
-| +__init__()         |
-| +get_nome()         |
-```
+![deepseek_mermaid_20250601_4b4dfe](https://github.com/user-attachments/assets/e27ff40f-0c94-42d7-ad9c-2851759edcde)
 
-```text
-+---------------------+
-|      Receita        |
-+---------------------+
-| - valor: float      |
-| - data: date        |
-| - categoria: str    |
-+---------------------+
-| +__init__()         |
-| +get_valor()        |
-| +get_data()         |
-| +get_categoria()    |
-```
-
-```text
-+---------------------+
-|      Despesa        |
-+---------------------+
-| - valor: float      |
-| - data: date        |
-| - categoria: str    |
-+---------------------+
-| +__init__()         |
-| +get_valor()        |
-| +get_data()         |
-| +get_categoria()    |
-```
-
-```text
-+---------------------+
-|      Carteira       |
-+---------------------+
-| - receitas: list    |
-| - despesas: list    |
-+---------------------+
-| +__init__()         |
-| +adicionar_receita()|
-| +adicionar_despesa()|
-| +saldo_total()      |
-```
-
-```text
-+---------------------+
-|     main.py         |
-+---------------------+
-| (Controlador Flask) |
-+---------------------+
-| +rotas de interface |
-```
 
 ### Relações:
 - `Carteira` possui `Receita` e `Despesa`
