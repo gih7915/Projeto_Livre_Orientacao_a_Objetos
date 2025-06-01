@@ -86,8 +86,7 @@ Desenvolvida com Flask, a interface é simples e intuitiva, apresentando as tran
 ## 📬 Contato
 
 - Email: giovana79155@gmail.com  
-- Telefone: (61) 9 9243-2061
 
 ---
 
-**Projeto desenvolvido por Giovana — 2024**
+**Projeto desenvolvido por Giovana — 2025**
