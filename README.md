@@ -5,6 +5,11 @@ Faculdade UnB Gama — Prof. Henrique Moura
 
 ---
 
+## Acesse o link do projeto
+https://projeto-livre-orientacao-a-objetos-3.onrender.com/
+
+---
+
 ## 📋 Definição do Problema
 
 Este projeto tem como objetivo criar um sistema para controle financeiro pessoal, que permita ao usuário cadastrar receitas e despesas, visualizar o saldo atual e organizar as transações por mês e categoria.
@@ -54,20 +59,23 @@ Este projeto tem como objetivo criar um sistema para controle financeiro pessoal
 
 ## 🗂 Estrutura do Projeto
 
+```text
 controle-financeiro/
-├── main.py # Aplicação Flask principal
-├── README.md # Documentação do projeto
+├── main.py                  # Lógica principal com Flask
+├── README.md                # Este arquivo
 ├── data/
-│ └── dados.pkl # Arquivo de dados serializados
+│   └── dados.pkl            # Dados serializados
 ├── static/
-│ └── styles.css # Arquivo de estilos CSS
+│   └── styles.css           # Estilo da página
 ├── templates/
-│ └── index.html # Template HTML principal
+│   └── index.html           # Página principal
 └── package/
-├── carteira.py # Classe Carteira
-├── categoria.py # Classe Categoria
-├── receita.py # Classe Receita
-└── despesa.py # Classe Despesa
+    ├── carteira.py          # Classe Carteira
+    ├── categoria.py         # Classe Categoria
+    ├── receita.py           # Classe Receita
+    └── despesa.py           # Classe Despesa
+```
+
 
 ---
 
