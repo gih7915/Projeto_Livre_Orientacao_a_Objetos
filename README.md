@@ -120,4 +120,4 @@ Desenvolvida com Flask, a interface é simples e intuitiva, apresentando as tran
 
 ---
 
-**Projeto desenvolvido por Giovana — 2025**
+**Projeto desenvolvido por Giovana Ferreira Santos — 2025**
