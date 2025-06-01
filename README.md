@@ -135,6 +135,8 @@ Diagrama de classes representando a modelagem do sistema de controle financeiro:
 ```text
 controle-financeiro/
 ├── main.py                  # Lógica principal com Flask
+├── app.py
+├── requirements.txt
 ├── README.md                # Este arquivo
 ├── data/
 │   └── dados.pkl            # Dados serializados
@@ -142,11 +144,16 @@ controle-financeiro/
 │   └── styles.css           # Estilo da página
 ├── templates/
 │   └── index.html           # Página principal
+    └── transacao.html         
 └── package/
     ├── carteira.py          # Classe Carteira
     ├── categoria.py         # Classe Categoria
     ├── receita.py           # Classe Receita
     └── despesa.py           # Classe Despesa
+    ├── relatorio.py         # Classe Relatório
+    └── transacao.py         # Classe Transação
+    ├── mixins.py            
+    └── _init_.py.py         
 ```
 
 
